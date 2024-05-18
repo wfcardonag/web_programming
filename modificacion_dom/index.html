@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificación DOM</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Ejercicio de modificación del DOM</h1>
+    <div id="formularioPersona">
+        <input id="nombrePersona" type="text" placeholder="Nombre" maxlength="10">
+        <br>
+        <input id="apellidoPersona" type="text" placeholder="Apellido">
+        <br>
+        <input id="edadPersona" type="text" placeholder="Edad">
+        <br>
+        <select id="tipoIdPersona">
+            <option value="">Seleccione tipo id</option>
+            <option value="cc">Cédula de ciudadanía</option>
+            <option value="ti">Tarjeta de Identidad</option>
+            <option value="ce">Cédula de extranjería</option>
+        </select>
+        <br>
+        <input id="numeroIdPersona" type="text" placeholder="Número de identificación">
+        <br>
+        <button id="guardarPersona" onclick="guardarPersona()" >Guardar Persona</button>        
+    </div>
+    <table id="tablaPersonas">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Edad</td>
+                <td>Tipo de identificación</td>
+                <td>Número de identificación</td>
+            </tr>
+        </thead>
+        <tbody id="bodyPersona">      
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Edad</td>
+            </tr>
+        </thead>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html> 

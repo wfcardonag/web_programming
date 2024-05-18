@@ -1,0 +1,37 @@
+#tablaPersonas {
+    background-color: aquamarine;
+    border: 2px solid rgb(59, 57, 57);
+}
+
+#tablaPersonas>thead{
+    font-weight: bolder;
+}
+
+#tablaPersonas>thead>tr>td, #tablaPersonas>tbody>tr>td{
+    width: 200px;
+    border-bottom: 2px solid rgb(59, 57, 57);
+}
+
+input, #tipoIdPersona{
+    width: 300px;
+    border: 2px solid rgb(59, 57, 57);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#guardarPersona {
+    width: 300px;
+    border: 2px solid rgb(59, 57, 57);
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: green;
+}
+
+#formularioPersona{
+    background-color: darkgrey;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
