@@ -6,13 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <table>
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Nombre Oficial</td>
+            </tr>
+        </thead>
+        <tbody id="bodyCop">
+        </tbody>
+    </table>
 </body>
 
 <script>
     window.addEventListener('load', ()=> {
         llamadaFetch();
-        llamadaAjax();
+        //llamadaAjax();
     });
 
     function llamadaAjax() {
@@ -30,6 +39,7 @@
             if (xhr.readyState == 4 && xhr.status == 200) {
                 const data = xhr.response;
                 console.log(data);
+                console.log("HOLA");
             } else {
                 console.log(`Error: ${xhr.status}`);
             }
@@ -37,19 +47,29 @@
     }
 
     async function llamadaFetch() {
-        const url = 'https://api-football-v1.p.rapidapi.com/v3/leagues';
+        //const url = 'https://api-football-v1.p.rapidapi.com/v3/leagues';
+        const url = "https://restcountries.com/v3.1/currency/cop";
         const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': 'acb6885234mshf3da92219d8e949p1f9429jsne885585285e1',
-                'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-            }
+            method: 'GET'
         };
 
         try {
             const response = await fetch(url, options);
             const result = await response.text();
-            console.log(result);
+            //console.log(result);
+            let cop = JSON.parse(result);
+            console.log(cop);
+            console.log(cop[0].name.common);
+            console.log(cop[0].name.official);
+
+            var fila = `
+                <tr>
+                    <td>${cop[0].name.common}</td>
+                    <td>${cop[0].name.official}</td>
+                </tr>           
+                `;
+            var tabla = document.getElementById("bodyCop").innerHTML += fila;
+            
         } catch (error) {
             console.error(error);
         }
