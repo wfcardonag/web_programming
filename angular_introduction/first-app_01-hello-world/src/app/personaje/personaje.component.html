@@ -1,0 +1,14 @@
+<div id="tarjetaPersonaje">
+    <img *ngIf="personajeFuturama.image" src="{{personajeFuturama.image}}" alt="Personaje Futurama">
+    <img *ngIf="!personajeFuturama.image" src="../../assets/avatar.png" alt="Personaje Futurama por defecto">
+    <div>
+        <b>Nombre:</b> {{personajeFuturama.name}}
+    </div>
+    <div>
+        <b>Género:</b> {{personajeFuturama.gender}}
+    </div>
+    <div>
+        <b>Especie</b> {{personajeFuturama.species}}
+    </div>
+    
+</div>
