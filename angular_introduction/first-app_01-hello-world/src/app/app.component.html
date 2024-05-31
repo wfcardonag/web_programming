@@ -1,5 +1,4 @@
 <h1>PERSONAJES FUTURAMA</h1>
-<botoncitos></botoncitos>
 
 <input type="checkbox" name="isListaEnabled" [(ngModel)]="isListaEnabled">
 <input type="text" name="nombrePersonaje" [(ngModel)]="nombrePersonaje">
@@ -25,8 +24,12 @@
 
 
 <div *ngIf="isListaEnabled" id="contenedorPersonajes">
-    <ng-container *ngFor="let personajeSerieFuturama of listaPersonajes.items">
-        <app-personaje [personajeFuturama]="personajeSerieFuturama"></app-personaje>
-    </ng-container>
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let personajeSerieFuturama of listaPersonajes.items">
+                <app-personaje [personajeFuturama]="personajeSerieFuturama"></app-personaje>
+            </ng-container>
+        </div>
+    </div>
 </div>
 
