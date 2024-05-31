@@ -1,0 +1,16 @@
+
+„
+java:S4165$"bRemove this useless assignment; "edad" already holds the assigned value along all execution paths.(ø·Óøÿÿÿÿ8‡ï­çû1
+G	java:S106""+Replace this use of System.out by a logger.(–ÿùÛ8Šï­çû1
+G	java:S106)"+Replace this use of System.out by a logger.(ÃÏç¿8‹ï­çû1
+G	java:S106-"+Replace this use of System.out by a logger.(Îö¢²8‹ï­çû1
+G	java:S1061"+Replace this use of System.out by a logger.(Ã‹’Ò8‹ï­çû1
+Q
+java:S1656$"/Remove or correct this useless self-assignment.(ø·Óøÿÿÿÿ8‹ï­çû1
+N
+java:S1068",Remove this unused "estatura" private field.(¸©ÅÅÿÿÿÿÿ8Œï­çû1
+O
+java:S1068	"-Remove this unused "direccion" private field.(“’’öÿÿÿÿÿ8Œï­çû1
+P
+java:S1068
+".Remove this unused "estaActivo" private field.(³¬€çøÿÿÿÿ8Œï­çû1

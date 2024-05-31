@@ -1,16 +1,28 @@
 import {Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PersonajeComponent } from './personaje/personaje.component';
+import {FormsModule} from '@angular/forms';
+import { BotonesComponent } from './botones/botones.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, PersonajeComponent],
+  imports: [CommonModule, PersonajeComponent, FormsModule, BotonesComponent],
   templateUrl: "./app.component.html",
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'default';
+  isListaEnabled = true;
+  nombrePersonaje = "Fray";
+
+  listaEjemploFor = [
+    1, 
+    2,
+    3,
+    4,
+    5
+  ]
 
   listaPersonajes = {
     "items": [
@@ -470,5 +482,4 @@ export class AppComponent {
     "size": 50,
     "pages": 9
   }; 
-  
 }

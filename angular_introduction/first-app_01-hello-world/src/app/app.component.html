@@ -1,6 +1,30 @@
 <h1>PERSONAJES FUTURAMA</h1>
+<botoncitos></botoncitos>
 
-<div id="contenedorPersonajes">
+<input type="checkbox" name="isListaEnabled" [(ngModel)]="isListaEnabled">
+<input type="text" name="nombrePersonaje" [(ngModel)]="nombrePersonaje">
+
+<h3>{{nombrePersonaje}}</h3>
+
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Nombre</td>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let numeroDeListaActual of listaEjemploFor">
+           <tr>
+            <td>{{numeroDeListaActual}}</td>
+            <td>Mi número {{numeroDeListaActual}}</td>
+           </tr> 
+        </ng-container>
+    </tbody>
+</table>
+
+
+<div *ngIf="isListaEnabled" id="contenedorPersonajes">
     <ng-container *ngFor="let personajeSerieFuturama of listaPersonajes.items">
         <app-personaje [personajeFuturama]="personajeSerieFuturama"></app-personaje>
     </ng-container>
